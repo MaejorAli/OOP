@@ -1,0 +1,30 @@
+{
+  "name": "oop",
+  "version": "1.0.0",
+  "description": "object oriented programming program",
+  "main": "src/main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaejorAli/OOP.git"
+  },
+  "keywords": [
+    "OOP",
+    "javascript"
+  ],
+  "author": "Ali Shaibu-Salami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaejorAli/OOP/issues"
+  },
+  "homepage": "https://github.com/MaejorAli/OOP#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
