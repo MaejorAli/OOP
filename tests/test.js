@@ -27,7 +27,7 @@ describe('Test cases for MallCart OOP ', () => {
            assert.equal(cityMall.nameOfItems, "shoe");
        });
 });
-   describe('can calculate total amount', () => {
+   describe('can calculate  total', () => {
        it('should return "40"', () => {
            const cityMall = new MallCart();
            cityMall.addItems(7,10,'toys')

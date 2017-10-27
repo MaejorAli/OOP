@@ -1,26 +1,21 @@
 class MallCart{
   constructor(){
-//this instance variable stores the total amount of goods purchased
     this.total = 0;
-//this stores key:value pairs of goods purchased and quantity
     this.items = {};
-//this is the balaance of customer after checking out
     this.balance = 0;
-//this variable determines when and how much discount you should use
     this.discount = 0;
-// keeps track of the items in the items 
     this.nameOfItems = [];
   }
   
-//add items to cart
+
   addItems(quantity,price,nameOfItem){
-/*check if the customer has purchased a particular item before,
+/*checks if the customer has purchased a particular item before,
   then sum up the quantities 
   previous values or creating new ones */
     if(this.nameOfItems.indexOf(nameOfItem) in this.nameOfItems){
       this.items[nameOfItem] += quantity;
       this.total += quantity * price;
-//If item has not been purchased before,we create it in the items instance variable
+
     }else{
       this.total += quantity * price;
       this.items[nameOfItem] =  quantity;
@@ -28,7 +23,7 @@ class MallCart{
     }
    
   }
-//remove items from cart   
+
   removeItems(quantity,price,nameOfItem){
 /*if the quantity being removed is greater than or equal to the quantity already in cart,
 we  remove that particular item totally from the cart */
@@ -51,7 +46,7 @@ we  remove that particular item totally from the cart */
     return "You qualify for discount worth "+this.discount;
   }
 
-//checkout   
+ 
   checkOutWithYourCart(amountPaid){
     if(amountPaid < this.total){
       return "You have not paid enough";
@@ -77,15 +72,13 @@ we  remove that particular item totally from the cart */
   }
 }
 
-/*here this is a Mallbag 
-that inherits from the Mall cart class
-*/
+// Mallbag inherits from the Mall cart class
 class MallBag extends MallCart{
   addMoreToYourCart(){
     if (this.total < 75){
       return " You do not qualify for freebies,spend up to $100";
     }
-//this exhibits polymorphism    
+// this exhibits polymorphism    
     this.discount += 3;
     return "You can add more to your cart worth $10 to your cart";
   }
